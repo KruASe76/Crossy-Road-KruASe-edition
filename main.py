@@ -9,7 +9,7 @@ clock=pygame.time.Clock()
 done=False
 
 main_type, main, LINE_WIDTH, death, win=[random.choice([-1, 1])], [], 40, 0, 0
-car_list1, car_list2=[pygame.image.load(os.path.join('images','car1.png')), pygame.image.load(os.path.join('images','car2.png')), pygame.image.load(os.path.join('images','car3.png')), pygame.image.load(os.path.join('images','car4.png')), pygame.image.load(os.path.join('images','car5.png')), pygame.image.load(os.path.join('images','car6.png'))], [pygame.image.load(os.path.join('images','1car.png')), pygame.image.load(os.path.join('images','2car.png')), pygame.image.load(os.path.join('images','3car.png')), pygame.image.load(os.path.join('images','4car.png')), pygame.image.load(os.path.join('images','5car.png')), pygame.image.load(os.path.join('images','6car.png'))]
+car_list1, car_list2=[pygame.image.load(os.path.join('car1.png')), pygame.image.load(os.path.join('car2.png')), pygame.image.load(os.path.join('car3.png')), pygame.image.load(os.path.join('car4.png')), pygame.image.load(os.path.join('car5.png')), pygame.image.load(os.path.join('car6.png'))], [pygame.image.load(os.path.join('1car.png')), pygame.image.load(os.path.join('2car.png')), pygame.image.load(os.path.join('3car.png')), pygame.image.load(os.path.join('4car.png')), pygame.image.load(os.path.join('5car.png')), pygame.image.load(os.path.join('6car.png'))]
 BIG_FONT, SMALL_FONT=pygame.font.Font('jbm-r.ttf', 30), pygame.font.Font('jbm-r.ttf', 10)
 
 def generate_level():
@@ -109,7 +109,7 @@ class Player():
         self.x=(WIDTH-LINE_WIDTH)/2
         self.y=0
         self.collider=pygame.Rect(self.x, self.y, LINE_WIDTH, LINE_WIDTH)
-        self.image=pygame.image.load(os.path.join('images','trollface.png'))
+        self.image=pygame.image.load(os.path.join('trollface.png'))
         self.flags=[True]*4
     
     def upd(self):
@@ -176,9 +176,9 @@ while not done:
             j.draw()
     
     if win==1:
-        screen.blit(pygame.image.load(os.path.join('images','win.png')), (490, 350))
-        screen.blit(pygame.image.load(os.path.join('images','win.png')), (490, 320))
-        screen.blit(pygame.image.load(os.path.join('images','for_restart.png')), (538, 421))
+        screen.blit(pygame.image.load(os.path.join('win.png')), (490, 350))
+        screen.blit(pygame.image.load(os.path.join('win.png')), (490, 320))
+        screen.blit(pygame.image.load(os.path.join('for_restart.png')), (538, 421))
         if event.type==pygame.KEYDOWN:
             if event.key==pygame.K_SPACE:
                 win=0
@@ -188,9 +188,9 @@ while not done:
                 generate_level()
 
     if death==1:
-        screen.blit(pygame.image.load(os.path.join('images','lose.png')), (490, 350))
-        screen.blit(pygame.image.load(os.path.join('images','lose.png')), (490, 330))
-        screen.blit(pygame.image.load(os.path.join('images','for_restart.png')), (555, 430))
+        screen.blit(pygame.image.load(os.path.join('lose.png')), (490, 350))
+        screen.blit(pygame.image.load(os.path.join('lose.png')), (490, 330))
+        screen.blit(pygame.image.load(os.path.join('for_restart.png')), (555, 430))
         if event.type==pygame.KEYDOWN:
             if event.key==pygame.K_SPACE:
                 death=0
