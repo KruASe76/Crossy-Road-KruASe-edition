@@ -10,7 +10,6 @@ done=False
 
 main_type, main, LINE_WIDTH, death, win=[random.choice([-1, 1])], [], 40, 0, 0
 car_list1, car_list2=[pygame.image.load(os.path.join('images','car1.png')), pygame.image.load(os.path.join('images','car2.png')), pygame.image.load(os.path.join('images','car3.png')), pygame.image.load(os.path.join('images','car4.png')), pygame.image.load(os.path.join('images','car5.png')), pygame.image.load(os.path.join('images','car6.png'))], [pygame.image.load(os.path.join('images','1car.png')), pygame.image.load(os.path.join('images','2car.png')), pygame.image.load(os.path.join('images','3car.png')), pygame.image.load(os.path.join('images','4car.png')), pygame.image.load(os.path.join('images','5car.png')), pygame.image.load(os.path.join('images','6car.png'))]
-BIG_FONT, SMALL_FONT=pygame.font.Font('jbm-r.ttf', 30), pygame.font.Font('jbm-r.ttf', 10)
 
 def generate_level():
     while len(main_type)<16:
